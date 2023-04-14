@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #105f6e8e;
+  font-family: Arial;
+}
+
+#world-clocks-div,
+#stopwatch-div,
+#timer-div,
+#display-clock {
+  background: #eee;
+  width: 700px;
+  padding: 40px 100px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+/* img {
+    display: block;
+    margin: auto;
+  } */
+
+input {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  font-family: Verdana;
+}
+
+.input-label {
+  margin-bottom: 0;
+}
+/*   
+  button {
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    background: #0d1973;
+    color: white;
+    cursor: pointer;
+  }
+   */
+
+h1 {
+  text-align: center;
+}
+
+#selector {
+  width: 255px;
+  background: #eee;
+  padding: 10px 10px;
+  margin: 20px auto;
+  border-radius: 3px;
+}
