@@ -1,0 +1,66 @@
+// Get the canvas element from HTML
+let canvas = document.getElementById('clockCanvas');
+let ctx = canvas.getContext('2d');
+
+// Set the canvas dimensions and position
+canvas.width = 300;
+canvas.height = 300;
+canvas.style.position = 'absolute';
+canvas.style.left = '50%';
+canvas.style.top = '50%';
+canvas.style.transform = 'translate(-50%, -50%)';
+
+// Function to draw the clock face
+function drawClock() {
+  // Draw the clock face
+  ctx.beginPath();
+  ctx.arc(150, 150, 120, 0, 2 * Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  ctx.lineWidth = 10;
+  ctx.strokeStyle = 'black';
+  ctx.stroke();
+
+  // Draw the hour markers
+  for (let i = 1; i <= 12; i++) {
+    let angle = (i / 12) * 2 * Math.PI;
+    let x = 150 + 100 * Math.sin(angle);
+    let y = 150 - 100 * Math.cos(angle);
+    ctx.beginPath();
+    ctx.arc(x, y, 5, 0, 2 * Math.PI);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+  }
+}
+
+// Function to draw the clock hands
+function drawHands(hours, minutes) {
+  // Calculate the angles for the hour and minute hands
+  let hourAngle = ((hours % 12) + minutes / 60) * 30 * Math.PI / 180;
+  let minuteAngle = minutes * 6 * Math.PI / 180;
+
+  // Draw the hour hand
+  ctx.beginPath();
+  ctx.moveTo(150, 150);
+  ctx.lineTo(150 + 50 * Math.sin(hourAngle), 150 - 50 * Math.cos(hourAngle));
+  ctx.lineWidth = 6;
+  ctx.strokeStyle = 'black';
+  ctx.stroke();
+
+  // Draw the minute hand
+  ctx.beginPath();
+  ctx.moveTo(150, 150);
+  ctx.lineTo(150 + 80 * Math.sin(minuteAngle), 150 - 80 * Math.cos(minuteAngle));
+  ctx.lineWidth = 4;
+  ctx.strokeStyle = 'black';
+  ctx.stroke();
+}
+
+// Function to update the clock
+function updateClock(hours, minutes) {
+  drawClock();
+  drawHands(hours, minutes);
+}
+
+// Call the updateClock function with initial input values
+updateClock(3, 45);
