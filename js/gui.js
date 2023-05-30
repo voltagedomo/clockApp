@@ -3,10 +3,12 @@
 // Variables
 let worldClockDiv = document.getElementById("world-clocks-div");
 let stopwatchDiv = document.getElementById("stopwatch-div");
+let stopwatchDiv2 = document.getElementById("display-stopwatch");
 let timerDiv = document.getElementById("timer-div");
 let worldClocksLink = document.getElementById("selector-clocks");
 let stopwatchLink = document.getElementById("selector-stopwatch");
 let timerLink = document.getElementById("selector-timer");
+let timerDiv2 = document.getElementById("timer-display");
 
 // Initialize div style and Selector style
 // switching div
@@ -23,6 +25,10 @@ timerLink.style.cursor = "pointer";
 worldClocksLink.style.color = "";
 worldClocksLink.style.textDecoration = "";
 worldClocksLink.style.cursor = "";
+stopwatchDiv2.style.display = "none";
+timeDisplay.style.display = "block";
+canvas.style.display = "block";
+timerDiv2.style.display = "none";
 
 // Stopwatch link clicked
 stopwatchLink.addEventListener("click", displayStopwatch);
@@ -40,10 +46,11 @@ function displayStopwatch() {
   stopwatchLink.style.color = "";
   stopwatchLink.style.textDecoration = "";
   stopwatchLink.style.cursor = "";
+  stopwatchDiv2.style.display = "block";
+  timeDisplay.style.display = "none";
+  canvas.style.display = "none";
+  timerDiv2.style.display = "none";
 }
-// color: blue;
-// text-decoration: underline;
-// cursor: pointer;
 
 // Timer link clicked
 timerLink.addEventListener("click", displayTimer);
@@ -61,6 +68,10 @@ function displayTimer() {
   timerLink.style.color = "";
   timerLink.style.textDecoration = "";
   timerLink.style.cursor = "";
+  stopwatchDiv2.style.display = "none";
+  timeDisplay.style.display = "none";
+  canvas.style.display = "none";
+  timerDiv2.style.display = "block";
 }
 
 // World clocks link clicked
@@ -79,4 +90,8 @@ function displayWorldClock() {
   worldClocksLink.style.color = "";
   worldClocksLink.style.textDecoration = "";
   worldClocksLink.style.cursor = "";
+  stopwatchDiv2.style.display = "none";
+  timeDisplay.style.display = "block";
+  canvas.style.display = "block";
+  timerDiv2.style.display = "none";
 }

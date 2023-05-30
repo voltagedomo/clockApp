@@ -15,7 +15,7 @@ body {
   top: 50px;
   left: 250px;
   padding: 40px 100px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 input {
@@ -58,9 +58,9 @@ h1 {
   float: right;
   position: fixed;
   top: 90px;
-  right: 0;
+  right: 5px;
   padding: 40px 100px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #display-clock {
@@ -75,9 +75,9 @@ h1 {
   float: right;
   position: fixed;
   top: 300px;
-  right: 0;
+  right: 5px;
   padding: 40px 100px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 @font-face {
@@ -113,15 +113,45 @@ h1 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 50%;
+  left: 125px;
 }
 
-.button-9:disabled {
-  cursor: default;
+#display-stopwatch {
+  top: 35px;
+  background: #eee;
+  width: 700px;
+  position: relative;
+  left: 250px;
+  padding: 40px 100px;
+  border-radius: 10px;
+  font-family: d7;
+  font-size: 100px;
+  text-align: center;
 }
 
-.button-9:focus {
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
-    rgba(50, 151, 211, 0.3) 0 0 0 4px;
+#timer-display {
+  background: #eee;
+  width: 700px;
+  position: relative;
+  top: 45px;
+  left: 250px;
+  padding: 40px 100px;
+  border-radius: 5px;
+}
+.time-input {
+  width: 50px;
+}
+
+/* hiding the arrows on number inputs code */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#timer-out {
+  font-family: d7;
+  font-size: 50px;
 }

@@ -13,9 +13,10 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
 
+    <script defer src="js/clock.js"></script>
     <script defer src="js/gui.js"></script>
-    <script defer src="js/main.js"></script>
     <script defer src="js/stopwatch.js"></script>
+    <script defer src="js/timer.js"></script>
   </head>
 
   <body>
@@ -41,13 +42,25 @@
     <div id="stopwatch-div">
       <h1>Stopwatch</h1>
       <p>Start when ready.</p>
-      <button class="button-9" id="stopwatch-start" role="button">START</button>
+      <button class="button-9" id="stopwatch-start" role="button">Start</button>
+      <button class="button-9" id="stopwatch-reset" role="button">Reset</button>
+    </div>
+    <div id="display-stopwatch">
+      <p id="stopwatch-out">00:00:00</p>
+      <ul id="lap-times"></ul>
     </div>
 
     <!-- Timer DIV -->
     <div id="timer-div">
       <h1>Timer</h1>
       <p>Set countdown time and press the START button.</p>
+      <button id="timer-btn" class="button-9">Start</button>
+    </div>
+    <div id="timer-display">
+      <input type="number" class="time-input" id="seconds-input" placeholder="S">
+      <input type="number" class="time-input" id="minutes-input" placeholder="M">
+      <input type="number" class="time-input" id="hours-input" placeholder="H">
+      <p id="timer-out"></p>
     </div>
   </body>
 </html>
